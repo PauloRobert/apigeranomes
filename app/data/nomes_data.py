@@ -1,4 +1,4 @@
-nomes_masculinos += [
+nomes_masculinos = [
     "Jerônimo", "Jesuino", "Joabe", "Jonas", "Jordão", "Josafa", "Josué", "Joviano",
     "Judas", "Judson", "Juliano", "Jurandir", "Juvencio", "Kaled", "Karl", "Kauan",
     "Kennedy", "Kevin", "Kleiton", "Ladislao", "Laerte", "Laercio", "Lauro",
