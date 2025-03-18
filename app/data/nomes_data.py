@@ -1,3 +1,50 @@
 nomes_masculinos = ["Carlos", "João", "Pedro", "Fernando", "Luiz", "Mateus", "Roberto", "Ricardo"]
 nomes_femininos = ["Ana", "Maria", "Juliana", "Camila", "Beatriz", "Fernanda", "Patrícia", "Renata"]
 sobrenomes = ["Silva", "Santos", "Oliveira", "Souza", "Lima", "Carvalho", "Gomes", "Ribeiro"]
+
+
+
+nomes_masculinos += [
+    "Jerônimo", "Jesuino", "Joabe", "Jonas", "Jordão", "Josafa", "Josué", "Joviano",
+    "Judas", "Judson", "Juliano", "Jurandir", "Juvencio", "Kaled", "Karl", "Kauan",
+    "Kennedy", "Kevin", "Kleiton", "Ladislao", "Laerte", "Laercio", "Lauro",
+    "Lavoisier", "Lazaro", "Leandro", "Lelio", "Lenilson", "Lenine", "Leocadio",
+    "Leoncio", "Leônidas", "Liberato", "Liborio", "Licurgo", "Lino", "Lion",
+    "Lisandro", "Livio", "Loreto", "Loris", "Lourenço", "Lourival", "Lucelio",
+    "Luciano", "Lucidio", "Lucio", "Ludgero", "Ludovico", "Luis", "Macario",
+    "Maciel", "Madson", "Magno", "Maicon", "Manoel", "Manfredo", "Mansueto",
+    "Marciano", "Marcilio", "Marcos", "Marinho", "Mario", "Marisio", "Marlon",
+    "Martim", "Massimo", "Matheus", "Matias", "Matteo", "Maurilio", "Maurino",
+    "Mauro", "Maximiliano", "Melquisedeque", "Mendel", "Messias", "Michel",
+    "Misael", "Modesto", "Moises", "Morgan", "Murilo", "Nadir", "Nairton",
+    "Napoleon", "Narciso", "Natal", "Nathan", "Natanael", "Nazareno", "Neco",
+    "Nereu", "Nestor", "Newton", "Nilton", "Nivaldo", "Noe", "Noel", "Norberto",
+    "Nuno", "Octavio", "Odair", "Odilon", "Odorico", "Olavo", "Olegario", "Olindo",
+    "Olival", "Orestes", "Oriano", "Orlando", "Orson", "Osias", "Osmar", "Osvaldo",
+    "Otacilio", "Otavio", "Othon", "Ovidio", "Ozias", "Pablo", "Pacomio", "Palmiro",
+    "Palmiro", "Pancracio", "Paolo", "Pascoal", "Patricio", "Paulino", "Paulo",
+    "Pavel", "Percival", "Petronio", "Pietro", "Placido", "Plinio", "Plutarco",
+    "Policarpo", "Polidorio", "Pompeo", "Porfirio", "Porfirio", "Primo", "Procopio",
+    "Prospero", "Publio", "Quincas", "Quintiliano", "Quintino", "Quirino", "Rafael",
+    "Raimundo", "Ramiro", "Raoni", "Raul", "Reginaldo", "Regis", "Reinaldo",
+    "Remigio", "Remo", "Renan", "Renato", "Renzo", "Ricardo", "Rinaldo", "Rivaldo",
+    "Roberto", "Robson", "Rodolfo", "Rodrigo", "Rogerio", "Rolando", "Romario",
+    "Romildo", "Romualdo", "Romulo", "Ronaldo", "Roque", "Rosaldo", "Rosario",
+    "Rubem", "Rubens", "Rufino", "Rui", "Sabino", "Salomao", "Salvador", "Salvino",
+    "Samuel", "Sandro", "Sansao", "Santiago", "Saulo", "Sebastiao", "Selton",
+    "Sergio", "Severiano", "Severino", "Sidney", "Silas", "Silvano", "Silvestre",
+    "Silvio", "Simao", "Sinclair", "Sinval", "Sirio", "Sixto", "Soares", "Socorro",
+    "Socrates", "Solano", "Stanislau", "Stefano", "Tadeu", "Tales", "Tarcisio",
+    "Tarso", "Tatiano", "Telmo", "Teobaldo", "Teodoro", "Teofilo", "Terencio",
+    "Tertuliano", "Thales", "Theo", "Thiago", "Tibério", "Ticiano", "Timoteo",
+    "Tiago", "Tito", "Tobias", "Tomaz", "Torquato", "Tristao", "Tulio", "Ubaldo",
+    "Ubirajara", "Ugo", "Ulisses", "Umberto", "Uriel", "Valdemar", "Valdir",
+    "Valdomiro", "Valente", "Valentim", "Valerio", "Valfredo", "Valter", "Vanderlei",
+    "Vandir", "Vasco", "Venancio", "Venceslau", "Vicente", "Victor", "Vidal",
+    "Vilmar", "Vinicius", "Virgilio", "Vital", "Vitor", "Vivaldo", "Vladimir",
+    "Voltaire", "Walace", "Walcir", "Waldecy", "Waldir", "Waldomiro", "Walmir",
+    "Walter", "Wanderson", "Washington", "Weber", "Wellington", "Wendel", "Werner",
+    "Wesley", "William", "Wilson", "Windsor", "Xavier", "Xenofonte", "Xisto",
+    "Yago", "Ygor", "Yuri", "Yves", "Zacarias", "Zaqueu", "Zeno", "Zeferino",
+    "Zeus", "Zezinho", "Ziraldo", "Zoroastro", "Zulmira"
+]
