@@ -1,9 +1,3 @@
-nomes_masculinos = ["Carlos", "João", "Pedro", "Fernando", "Luiz", "Mateus", "Roberto", "Ricardo"]
-nomes_femininos = ["Ana", "Maria", "Juliana", "Camila", "Beatriz", "Fernanda", "Patrícia", "Renata"]
-sobrenomes = ["Silva", "Santos", "Oliveira", "Souza", "Lima", "Carvalho", "Gomes", "Ribeiro"]
-
-
-
 nomes_masculinos += [
     "Jerônimo", "Jesuino", "Joabe", "Jonas", "Jordão", "Josafa", "Josué", "Joviano",
     "Judas", "Judson", "Juliano", "Jurandir", "Juvencio", "Kaled", "Karl", "Kauan",
@@ -89,4 +83,40 @@ nomes_femininos = [
     "Malu", "Kelly", "Giovana", "Natalia", "Mariana", "Letícia", "Júlia", "Adriana", "Denise", "Elaine",
     "Estefania", "Raquel", "Marcelle", "Isabela", "Priscila", "Raíssa", "Sabrina", "Michele", "Aline", "Sara",
     "Jessica", "Beatriz", "Nathalia", "Karina", "Raquel", "Cibele", "Janaína", "Carolina", "Letícia", "Elisandra"
+]
+sobrenomes = [
+    "Silva", "Santos", "Oliveira", "Souza", "Lima", "Carvalho", "Gomes", "Ribeiro", "Almeida", "Costa",
+    "Rodrigues", "Pereira", "Martins", "Fernandes", "Alves", "Moura", "Araújo", "Nascimento", "Ferreira", "Pinto",
+    "Barbosa", "Moreira", "Dias", "Mendes", "Teixeira", "Fonseca", "Cavalcante", "Vieira", "Araujo", "Maciel",
+    "Nunes", "Henrique", "Bueno", "Cardoso", "Nascimento", "Vieira", "Farias", "Ramos", "Correia", "Gonçalves",
+    "Campos", "Batista", "Cunha", "Lopes", "Borges", "Duarte", "Martins", "Mello", "Lima", "Castro", "Silveira",
+    "Brito", "Figueiredo", "Cruz", "Tavares", "Pereira", "Rocha", "Cardoso", "Gouveia", "Tavares", "Ramos",
+    "Serrano", "Vasconcelos", "Sá", "Xavier", "Pacheco", "Monteiro", "Valente", "Simões", "Mota", "Fonseca",
+    "Ribeiro", "Machado", "Leal", "Azevedo", "Prado", "Cavalcanti", "Lacerda", "Siqueira", "Mota", "Farias",
+    "Borges", "Teixeira", "Pinheiro", "Lopes", "Santos", "Miranda", "Queiroz", "Amaral", "Gomes", "Costa",
+    "Araujo", "Dias", "Ribeiro", "Pereira", "Carneiro", "Nunes", "Bittencourt", "Lima", "Pimentel", "Sá",
+    "Assis", "Torres", "Borges", "Vilela", "Brito", "Cardoso", "Tavares", "Zanetti", "Santiago", "Barros",
+    "Campos", "Dantas", "Gonçalves", "Pereira", "Martins", "Moura", "Nascimento", "Siqueira", "Alves", "Barreto",
+    "Mendes", "Morais", "Azevedo", "Pimentel", "Sousa", "Brandão", "Figueira", "Andrade", "Lima", "Neto",
+    "Freitas", "Martins", "Cunha", "Pereira", "Ferreira", "Lopes", "Ribeiro", "Vasconcelos", "Xavier", "Almeida",
+    "Cardoso", "Lacerda", "Tavares", "Maciel", "Ramos", "Vaz", "Carvalho", "Duarte", "Farias", "Figueiredo",
+    "Frota", "Moraes", "Ferreira", "Cavalcante", "Queiroz", "Dutra", "Barreto", "Mello", "Brito", "Lopes",
+    "Gonçalves", "Reis", "Rodrigues", "Silveira", "Mendonça", "Azevedo", "Monteiro", "Lima", "Costa", "Ferreira",
+    "Gomes", "Ribeiro", "Rodrigues", "Santos", "Teixeira", "Siqueira", "Sá", "Figueiredo", "Araujo", "Vilela",
+    "Farias", "Rocha", "Ramos", "Almeida", "Gonçalves", "Duarte", "Pereira", "Lima", "Lopes", "Cardoso", "Barbosa",
+    "Santos", "Araujo", "Machado", "Vieira", "Santos", "Faria", "Andrade", "Alves", "Xavier", "Monteiro",
+    "Reis", "Batista", "Silva", "Brito", "Rodrigues", "Cunha", "Moura", "Cavalcante", "Prado", "Carvalho",
+    "Ribeiro", "Nunes", "Siqueira", "Figueiredo", "Mendonça", "Lopes", "Cavalcanti", "Ribeiro", "Costa",
+    "Teixeira", "Machado", "Borges", "Amorim", "Pinheiro", "Morais", "Gomes", "Vieira", "Barbosa", "Souza",
+    "Pereira", "Azevedo", "Figueiredo", "Ramos", "Santos", "Monteiro", "Duarte", "Siqueira", "Leal", "Rocha",
+    "Mendes", "Lima", "Tavares", "Serrano", "Melo", "Almeida", "Martins", "Gonçalves", "Costa", "Pereira",
+    "Mendes", "Almeida", "Azevedo", "Figueiredo", "Duarte", "Nascimento", "Siqueira", "Lopes", "Machado", "Ribeiro",
+    "Batista", "Barros", "Barreto", "Campos", "Tavares", "Alves", "Farias", "Santos", "Moraes", "Maciel",
+    "Silveira", "Pinto", "Lima", "Andrade", "Tavares", "Monteiro", "Azevedo", "Maciel", "Pereira", "Cardoso",
+    "Pereira", "Siqueira", "Ferreira", "Batista", "Silva", "Dantas", "Almeida", "Ribeiro", "Mendes", "Ferreira",
+    "Alves", "Machado", "Santos", "Barreto", "Monteiro", "Mendes", "Teixeira", "Gomes", "Araujo", "Castro",
+    "Gonçalves", "Martins", "Pereira", "Tavares", "Siqueira", "Sousa", "Figueiredo", "Cavalcante", "Gomes",
+    "Brito", "Vieira", "Cavalcanti", "Martins", "Dantas", "Pereira", "Oliveira", "Cardoso", "Pinto", "Lopes",
+    "Reis", "Pereira", "Barros", "Ferreira", "Silva", "Moraes", "Maciel", "Figueiredo", "Barbosa", "Azevedo",
+    "Gonçalves", "Siqueira", "Mello", "Cunha", "Nunes", "Tavares", "Pereira", "Lima", "Costa", "Ferreira"
 ]
