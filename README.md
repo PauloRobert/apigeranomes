@@ -1,31 +1,33 @@
-# 🚀 API Geradora de Nomes
+# API Geradora de Nomes
 
-## 📌 Descrição
-A **API Geradora de Nomes** é uma aplicação desenvolvida com **FastAPI** que permite gerar nomes aleatórios, nomes completos e nomes categorizados por gênero.  
-Ela foi estruturada de forma modular para facilitar a manutenção e escalabilidade.
+## Descrição
+A **API Geradora de Nomes** é uma aplicação desenvolvida com **FastAPI** para gerar nomes aleatórios, nomes completos e nomes categorizados por gênero (masculino e feminino).
+
+## Como acessar
+
+### URL da API
+A API está disponível localmente no seguinte endereço: http://127.0.0.1:8000
+
+
+### Swagger UI
+A documentação interativa da API, onde você pode testar os endpoints diretamente, pode ser acessada no seguinte endereço:
+http://127.0.0.1:8000/docs
+
 
 ---
 
-## 📂 Estrutura do Projeto
-api_gera_nomes 
-├── app/ │ 
-├── init.py │ ├── main.py │ ├── routes/ │ │ ├── init.py │ │ ├── nomes.py │ ├── services/ │ │ ├── init.py │ │ ├── gerador_nomes.py │ ├── data/ │ │ ├── init.py │ │ ├── nomes_data.py ├── requirements.txt ├── README.md
-- `routes/nomes.py` → Contém os endpoints da API.
-- `services/gerador_nomes.py` → Lógica de geração de nomes.
-- `data/nomes_data.py` → Lista fixa de nomes masculinos, femininos e sobrenomes.
+## Bibliotecas Utilizadas
+
+- **FastAPI**: Framework para criação da API.
+- **Uvicorn**: Servidor ASGI para rodar a aplicação FastAPI.
+- **random**: Biblioteca padrão do Python usada para gerar nomes aleatórios.
 
 ---
 
-## 🛠️ Configuração do Ambiente
+Isso é tudo! Basta seguir as instruções de execução para rodar a API localmente e acessar os endpoints através do Swagger.
 
-### 1️⃣ Criar e Ativar o Ambiente Virtual
-```bash
-python -m venv venv
 
-Windows:
+---
 
-venv\Scripts\activate
+Isso é tudo! Basta seguir as instruções de execução para rodar a API localmente e acessar os endpoints através do Swagger.
 
-Linux/Mac:
-
-source venv/bin/activate
