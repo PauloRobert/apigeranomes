@@ -16,6 +16,23 @@ http://127.0.0.1:8000/docs
 
 ---
 
+## Personalização da Quantidade de Nomes
+Você pode especificar a quantidade de nomes a ser gerada utilizando o parâmetro **qtd** nos endpoints. Caso o parâmetro não seja informado, a API irá gerar apenas **1 nome** por padrão.
+
+---
+
+## Bibliotecas Utilizadas
+
+- **FastAPI**: Framework para criação da API.
+- **Uvicorn**: Servidor ASGI para rodar a aplicação FastAPI.
+- **random**: Biblioteca padrão do Python usada para gerar nomes aleatórios.
+
+---
+
+Isso é tudo! Basta seguir as instruções de execução para rodar a API localmente e acessar os endpoints através do Swagger.
+
+---
+
 ## Bibliotecas Utilizadas
 
 - **FastAPI**: Framework para criação da API.
