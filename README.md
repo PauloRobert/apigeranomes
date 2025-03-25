@@ -32,19 +32,3 @@ Você pode especificar a quantidade de nomes a ser gerada utilizando o parâmetr
 Isso é tudo! Basta seguir as instruções de execução para rodar a API localmente e acessar os endpoints através do Swagger.
 
 ---
-
-## Bibliotecas Utilizadas
-
-- **FastAPI**: Framework para criação da API.
-- **Uvicorn**: Servidor ASGI para rodar a aplicação FastAPI.
-- **random**: Biblioteca padrão do Python usada para gerar nomes aleatórios.
-
----
-
-Isso é tudo! Basta seguir as instruções de execução para rodar a API localmente e acessar os endpoints através do Swagger.
-
-
----
-
-Isso é tudo! Basta seguir as instruções de execução para rodar a API localmente e acessar os endpoints através do Swagger.
-
