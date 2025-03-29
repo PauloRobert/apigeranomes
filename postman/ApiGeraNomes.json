@@ -1,0 +1,165 @@
+{
+  "info": {
+    "_postman_id": "b9a4d6a7-8e8b-4e92-bac8-123456789abc",
+    "name": "API Geradora de Nomes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Gerar Nome Aleatório",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/gerarnome?qtd=2",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["gerarnome"],
+          "query": [{ "key": "qtd", "value": "2", "description": "Quantidade de nomes a serem gerados (padrão: 1)" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code é 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "let jsonData = pm.response.json();",
+              "pm.test(\"Quantidade de nomes correta\", function () {",
+              "    pm.expect(jsonData.quantidade).to.eql(2);",
+              "});",
+              "",
+              "pm.test(\"Todos os nomes possuem categoria\", function () {",
+              "    jsonData.nomes.forEach(n => {",
+              "        pm.expect(n).to.have.property(\"categoria\");",
+              "    });",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Gerar Nome Completo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/gerarnomecompleto?qtd=2",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["gerarnomecompleto"],
+          "query": [{ "key": "qtd", "value": "2", "description": "Quantidade de nomes completos a serem gerados (padrão: 1)" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code é 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "let jsonData = pm.response.json();",
+              "pm.test(\"Quantidade de nomes correta\", function () {",
+              "    pm.expect(jsonData.quantidade).to.eql(2);",
+              "});",
+              "",
+              "pm.test(\"Todos os nomes completos possuem categoria\", function () {",
+              "    jsonData.nomes.forEach(n => {",
+              "        pm.expect(n).to.have.property(\"categoria\");",
+              "    });",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Gerar Nome Feminino",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/gerarnomemulher?qtd=2",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["gerarnomemulher"],
+          "query": [{ "key": "qtd", "value": "2", "description": "Quantidade de nomes femininos a serem gerados (padrão: 1)" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code é 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "let jsonData = pm.response.json();",
+              "pm.test(\"Quantidade de nomes correta\", function () {",
+              "    pm.expect(jsonData.quantidade).to.eql(2);",
+              "});",
+              "",
+              "pm.test(\"Todos os nomes são femininos\", function () {",
+              "    jsonData.nomes.forEach(n => {",
+              "        pm.expect(n.categoria).to.eql(\"Feminino\");",
+              "    });",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Gerar Nome Masculino",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/gerarnomehomem?qtd=2",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["gerarnomehomem"],
+          "query": [{ "key": "qtd", "value": "2", "description": "Quantidade de nomes masculinos a serem gerados (padrão: 1)" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code é 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "let jsonData = pm.response.json();",
+              "pm.test(\"Quantidade de nomes correta\", function () {",
+              "    pm.expect(jsonData.quantidade).to.eql(2);",
+              "});",
+              "",
+              "pm.test(\"Todos os nomes são masculinos\", function () {",
+              "    jsonData.nomes.forEach(n => {",
+              "        pm.expect(n.categoria).to.eql(\"Masculino\");",
+              "    });",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    }
+  ]
+}
