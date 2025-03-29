@@ -32,6 +32,7 @@ jobs:
       - name: Run tests with coverage
         run: |
           . venv/bin/activate
+          export PYTHONPATH=$(pwd)  # Define o PYTHONPATH para incluir o diretório atual
           pytest --cov=. --cov-report=xml:coverage.xml
 
   # Job para análise no SonarCloud após os testes passarem
