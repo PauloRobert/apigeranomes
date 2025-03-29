@@ -27,15 +27,17 @@ jobs:
           . venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
+          pip install pytest pytest-cov
 
-      - name: Run tests
+      - name: Run tests with coverage
         run: |
           . venv/bin/activate
-          pytest --maxfail=1 --disable-warnings -v --cov=. --cov-report=xml
+          pytest --cov=. --cov-report=xml:coverage.xml
+
   # Job para análise no SonarCloud após os testes passarem
   sonarcloud:
     runs-on: ubuntu-latest
-    needs: test  # Garante que os testes sejam executados antes de realizar a análise
+    needs: test  # Garante que os testes rodem antes
     steps:
       - name: Check out code
         uses: actions/checkout@v3
@@ -44,26 +46,23 @@ jobs:
         run: |
           curl -sSLo sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
           unzip sonar-scanner.zip
-          mv sonar-scanner-5.0.1.3006-linux sonar-scanner
-          echo "$GITHUB_WORKSPACE/sonar-scanner/bin" >> $GITHUB_PATH
+          echo "$(pwd)/sonar-scanner-5.0.1.3006-linux/bin" >> $GITHUB_PATH
 
       - name: Run SonarCloud analysis
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           sonar-scanner \
-            -Dsonar.organization=<YOUR_ORG> \
-            -Dsonar.projectKey=<YOUR_PROJECT_KEY> \
+            -Dsonar.organization=${{ secrets.SONAR_ORG }} \
+            -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }} \
             -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=$SONAR_TOKEN \
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
             -Dsonar.python.coverage.reportPaths=coverage.xml
 
   # Job para deploy (se necessário)
   deploy:
     runs-on: ubuntu-latest
-    needs: sonarcloud  # Garante que o deploy só ocorra após a análise no SonarCloud
+    needs: sonarcloud  # Só roda após análise no SonarCloud
     steps:
       - name: Deploy to Render
         run: |
-          # Adicione aqui o seu comando de deploy, por exemplo:
+          # Adicione aqui o comando de deploy, ex:
           # render deploy --service <YOUR_SERVICE_NAME> --branch master
