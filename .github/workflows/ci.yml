@@ -31,8 +31,7 @@ jobs:
       - name: Run tests
         run: |
           . venv/bin/activate
-          pytest --maxfail=1 --disable-warnings -v
-
+          pytest --maxfail=1 --disable-warnings -v --cov=my_package --cov-report=xml:coverage.xml
   # Job para análise no SonarCloud após os testes passarem
   sonarcloud:
     runs-on: ubuntu-latest
@@ -41,18 +40,22 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Set up SonarCloud
-        uses: SonarSource/sonarcloud-github-action@v2
-        with:
-          sonar-token: ${{ secrets.SONAR_TOKEN }}
+      - name: Install SonarScanner
+        run: |
+          curl -sSLo sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+          unzip sonar-scanner.zip
+          mv sonar-scanner-5.0.1.3006-linux sonar-scanner
+          echo "$GITHUB_WORKSPACE/sonar-scanner/bin" >> $GITHUB_PATH
 
       - name: Run SonarCloud analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          . venv/bin/activate
           sonar-scanner \
-            -Dsonar.projectKey=<YOUR_PROJECT_KEY> \
             -Dsonar.organization=<YOUR_ORG> \
+            -Dsonar.projectKey=<YOUR_PROJECT_KEY> \
             -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.login=$SONAR_TOKEN \
             -Dsonar.python.coverage.reportPaths=coverage.xml
 
   # Job para deploy (se necessário)
