@@ -31,7 +31,7 @@ jobs:
       - name: Run tests
         run: |
           . venv/bin/activate
-          pytest --maxfail=1 --disable-warnings -v --cov=my_package --cov-report=xml:coverage.xml
+          pytest --maxfail=1 --disable-warnings -v --cov=. --cov-report=xml
   # Job para análise no SonarCloud após os testes passarem
   sonarcloud:
     runs-on: ubuntu-latest
