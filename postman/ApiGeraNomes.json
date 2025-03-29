@@ -1,0 +1,94 @@
+{
+  "info": {
+    "_postman_id": "b9a4d6a7-8e8b-4e92-bac8-123456789abc",
+    "name": "API Geradora de Nomes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "123456"
+  },
+  "item": [
+    {
+      "name": "Gerar Nome Aleatório",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/gerarnome?qtd=1",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["gerarnome"],
+          "query": [{ "key": "qtd", "value": "1", "description": "Quantidade de nomes a serem gerados (padrão: 1)" }]
+        },
+        "description": "Gera um ou mais nomes aleatórios."
+      },
+      "response": []
+    },
+    {
+      "name": "Gerar Nome Completo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/gerarnomecompleto?qtd=1",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["gerarnomecompleto"],
+          "query": [{ "key": "qtd", "value": "1", "description": "Quantidade de nomes completos a serem gerados (padrão: 1)" }]
+        },
+        "description": "Gera um ou mais nomes completos."
+      },
+      "response": []
+    },
+    {
+      "name": "Gerar Nome Feminino",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/gerarnomemulher?qtd=1",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["gerarnomemulher"],
+          "query": [{ "key": "qtd", "value": "1", "description": "Quantidade de nomes femininos a serem gerados (padrão: 1)" }]
+        },
+        "description": "Gera um ou mais nomes femininos."
+      },
+      "response": []
+    },
+    {
+      "name": "Gerar Nome Masculino",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/gerarnomehomem?qtd=1",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["gerarnomehomem"],
+          "query": [{ "key": "qtd", "value": "1", "description": "Quantidade de nomes masculinos a serem gerados (padrão: 1)" }]
+        },
+        "description": "Gera um ou mais nomes masculinos."
+      },
+      "response": []
+    },
+    {
+      "name": "Swagger UI",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/docs",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["docs"]
+        },
+        "description": "Acessa a documentação interativa da API (Swagger UI)."
+      },
+      "response": []
+    }
+  ]
+}
