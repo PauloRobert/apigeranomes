@@ -57,4 +57,4 @@ jobs:
         run: npm install -g newman
 
       - name: Run Postman API tests
-        run: newman run postman/ApiGeraNomes.json --no-cache --reporters cli,json --reporter-json-export postman-report.json
+        run: newman run postman/ApiGeraNomes.json --reporters cli,json --reporter-json-export postman-report.json
