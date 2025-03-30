@@ -1,3 +1,13 @@
+name: CI/CD
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -22,18 +32,29 @@ jobs:
         run: |
           . venv/bin/activate
           export PYTHONPATH=$(pwd)
-          pytest --cov=. --cov-report=xml:coverage.xml || echo "Tests failed"
+          pytest --cov=. --cov-report=xml:coverage.xml
 
       - name: Start API
         run: |
           . venv/bin/activate
           uvicorn main:app --host 127.0.0.1 --port 8000 --reload &
-          sleep 3  # Aguarda 3 segundos antes de prosseguir
         env:
           PYTHONPATH: ${{ github.workspace }}
+
+      - name: Wait for API to be ready
+        run: |
+          for i in {1..10}; do
+            if curl --output /dev/null --silent --head --fail http://127.0.0.1:8000/docs; then
+              echo "API is up!"
+              exit 0
+            fi
+            echo "Waiting for API..."
+            sleep 2
+          done
+          echo "API did not start in time" && exit 1
 
       - name: Install Newman (Postman CLI)
         run: npm install -g newman
 
       - name: Run Postman API tests
-        run: newman run postman/ApiGeraNomes.json --no-cache --reporters cli,json --reporter-json-export postman-report.json #teste
+        run: newman run postman/ApiGeraNomes.json --no-cache --reporters cli,json --reporter-json-export postman-report.json
