@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  test:
+  Testes:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
@@ -45,10 +45,10 @@ jobs:
         run: |
           for i in {1..15}; do
             if curl --output /dev/null --silent --head --fail http://127.0.0.1:8000/docs; then
-              echo "API subiu, pau na maquina!"
+              echo "API subiu, pau na máquina!"
               exit 0
             fi
-            echo "Aguardando a api subir..."
+            echo "Aguardando a API subir..."
             sleep 2
           done
           echo "API did not start in time" && exit 1
@@ -58,3 +58,6 @@ jobs:
 
       - name: Run Postman API tests
         run: newman run postman/ApiGeraNomes.json --reporters cli,json --reporter-json-export postman-report.json
+
+      - name: Run Load Test with Postman using Runner
+        run: newman run postman/ApiGeraNomes.json --iteration-count 100 --delay-request 200 --reporters cli,json --reporter-json-export postman-load-test-report.json
