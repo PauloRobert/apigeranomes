@@ -34,36 +34,3 @@ jobs:
           . venv/bin/activate
           export PYTHONPATH=$(pwd)  # Define o PYTHONPATH para incluir o diretório atual
           pytest --cov=. --cov-report=xml:coverage.xml
-
-  # Job para análise no SonarCloud após os testes passarem
-  sonarcloud:
-    runs-on: ubuntu-latest
-    needs: test  # Garante que os testes rodem antes
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v3
-
-      - name: Install SonarScanner
-        run: |
-          curl -sSLo sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
-          unzip sonar-scanner.zip
-          echo "$(pwd)/sonar-scanner-5.0.1.3006-linux/bin" >> $GITHUB_PATH
-
-      - name: Run SonarCloud analysis
-        run: |
-          sonar-scanner \
-            -Dsonar.organization=${{ secrets.SONAR_ORG }} \
-            -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }} \
-            -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
-            -Dsonar.python.coverage.reportPaths=tests/coverage.xml
-
-  # Job para deploy (se necessário)
-  deploy:
-    runs-on: ubuntu-latest
-    needs: sonarcloud  # Só roda após análise no SonarCloud
-    steps:
-      - name: Deploy to Render
-        run: |
-          # Adicione aqui o comando de deploy, ex:
-          # render deploy --service <YOUR_SERVICE_NAME> --branch master
